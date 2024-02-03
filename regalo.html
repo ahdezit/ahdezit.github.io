@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha de Entrega del Regalo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #3498db;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 100px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        #download-link {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Su regalo estará disponible el 5 de febrero, por favor, sea paciente</h1>
+        <p>¡Gracias por su paciencia!</p>
+        <div id="download-link">
+            <a href="ruta_del_archivo.zip" download>Descargar Regalo</a>
+        </div>
+    </div>
+
+    <script>
+        // Obtener la fecha actual
+        const today = new Date();
+        // Definir la fecha objetivo (5 de febrero)
+        const targetDate = new Date('2024-02-05');
+        
+        // Verificar si la fecha actual es igual o posterior a la fecha objetivo
+        if (today >= targetDate) {
+            // Habilitar el enlace de descarga
+            document.getElementById('download-link').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
